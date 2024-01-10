@@ -4,22 +4,91 @@ body {
 }
 
 .container {
-	max-width: 600px;
-	margin: 60px auto;
+	display: block;
+	max-width: 440px;
+	margin: 40px auto;
 	background: white;
-	padding: 30px;
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-	border-radius: 10px;
+	padding: 32px 32px 16px 32px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+	border-radius: 12px;
 }
 
 h1 {
 	display: block;
-	margin: 24px 0 auto;
+	margin: 0 auto;
+	margin-top: 16px;
+	margin-bottom: 32px;
 	text-align: center;
+}
+
+.select-container {
+	background-color: white;
+	border: 1px solid #000000;
+	border-radius: 8px;
+	display: block;
+	margin: 20px 0;
+	padding: 12px 20px;
+	max-width: 100%;
+}
+
+.select-container:focus-within {
+	outline: 2px solid #885df1;
+}
+
+select {
+	border: none;
+	font-size: 16px;
+	outline: 1px solid transparent;
+	width: 100%;
+}
+
+.city {
+	border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+	display: flex;
+	justify-content: space-between;
+	padding: 28px 0;
+}
+
+.city:last-child {
+	border: none;
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: 700;
+	margin: 0 0 4px;
+}
+
+.date {
+	font-size: 16px;
+	font-weight: 300;
+	opacity: 0.8;
+}
+
+.time {
+	font-size: 40px;
+	font-weight: 700;
+	position: relative;
+	bottom: 4px;
+	vertical-align: center;
+}
+
+.time small {
+	font-size: 16px;
+	text-align: right;
+	position: relative;
+	bottom: 14px;
 }
 
 footer {
 	display: block;
-	margin: 16px 0 auto;
+	font-size: 16px;
+	font-weight: 300;
+	margin: 0 16px;
 	text-align: center;
+}
+
+footer a {
+	font-weight: 500;
 }
