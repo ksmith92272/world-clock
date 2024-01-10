@@ -32,6 +32,8 @@
 			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
 		<title>World Clock - Kimberly Smith</title>
 	</head>
 	<body>
@@ -44,29 +46,49 @@
 				>
 					<option value="">Choose a city</option>
 					<option value="">Your Current Location</option>
-					<option value="">London</option>
-					<option value="">Tokyo</option>
-					<option value="">Paris</option>
-					<option value="">New York</option>
-					<option value="">Sydney</option>
+					<option value="Europe/London">London 🇬🇧</option>
+					<option value="America/New_York">New York 🇺🇸</option>
+					<option value="Europe/Paris">Paris 🇫🇷</option>
+					<option value="Australia/Sydney">Sydney 🇦🇺</option>
+					<option value="Asia/Tokyo">Tokyo 🇯🇵</option>
 				</select>
 			</div>
-			<div class="city">
-				<div>
-					<h2>London 🇬🇧</h2>
-					<div class="date">January 1st, 2024</div>
+			<div>
+				<div
+					class="city"
+					id="Europe/London"
+				>
+					<div>
+						<h2>London 🇬🇧</h2>
+						<div class="date">January 1st, 2024</div>
+					</div>
+					<div>
+						<div class="time">09:41:00<small> AM</small></div>
+					</div>
 				</div>
-				<div>
-					<div class="time">09:41:00 <small>AM</small></div>
+				<div
+					class="city"
+					id="America/New_York"
+				>
+					<div>
+						<h2>New York 🇺🇸</h2>
+						<div class="date">January 1st, 2024</div>
+					</div>
+					<div>
+						<div class="time">09:41:00<small> AM</small></div>
+					</div>
 				</div>
-			</div>
-			<div class="city">
-				<div>
-					<h2>Tokyo 🇯🇵</h2>
-					<div class="date">January 1st, 2024</div>
-				</div>
-				<div>
-					<div class="time">09:41:00 <small>AM</small></div>
+				<div
+					class="city"
+					id="Asia/Tokyo"
+				>
+					<div>
+						<h2>Tokyo 🇯🇵</h2>
+						<div class="date">January 1st, 2024</div>
+					</div>
+					<div>
+						<div class="time">09:41:00 <small>AM</small></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -78,7 +100,7 @@
 				target="_blank"
 				>Kimberly Smith</a
 			>
-			is
+			and is
 			<a
 				href="https://github.com/ksmith92272/world-clock"
 				target="_blank"
