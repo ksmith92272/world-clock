@@ -41,7 +41,7 @@ function updateCity(event) {
 						<div class="time">${formattedTime}</div>
 					</div>
 				</div>
-        <a href="https://world-clock-shecodes-project-js.netlify.app/">Return Home</a>`;
+        <a href="/">Return Home</a>`;
 	}
 }
 
