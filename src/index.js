@@ -12,13 +12,20 @@ function updateTime() {
 	});
 }
 
-function showTime(event) {
+function updateCity(event) {
 	if (event.target.value.length > 0) {
 		let cityElement = document.getElementById("cities-container");
 		let citySelected = document.getElementById("cities");
 
 		let city = citySelected.options[citySelected.selectedIndex].text;
 		let timezone = event.target.value;
+		//let city = timezone.replace("_", " ").split("/")[1];
+
+		if (timezone === "current") {
+			timezone = moment.tz.guess();
+			city = timezone.replace("_", " ").split("/")[1] + " ⏰";
+		}
+
 		let current = moment().tz(timezone);
 		let formattedDate = current.format("MMMM Do, YYYY");
 		let formattedTime = current.format("h:mm:ss [<small>]A[</small>]");
@@ -43,12 +50,12 @@ updateTime();
 
 //Event listener for drop down menu
 let citySelected = document.getElementById("cities");
-citySelected.addEventListener("change", showTime);
+citySelected.addEventListener("change", updateCity);
 
 //Set interval to update time
 let cities = document.querySelectorAll(".city");
 if (cities.length < 1) {
-	setInterval(showTime, 1000);
+	setInterval(updateCity, 1000);
 } else {
 	setInterval(updateTime, 1000);
 }
