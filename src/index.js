@@ -19,7 +19,6 @@ function updateCity(event) {
 
 		let city = citySelected.options[citySelected.selectedIndex].text;
 		let timezone = event.target.value;
-		//let city = timezone.replace("_", " ").split("/")[1];
 
 		if (timezone === "current") {
 			timezone = moment.tz.guess();
@@ -41,7 +40,8 @@ function updateCity(event) {
 					<div>
 						<div class="time">${formattedTime}</div>
 					</div>
-				</div>`;
+				</div>
+        <a href="https://world-clock-shecodes-project-js.netlify.app/">Return Home</a>`;
 	}
 }
 
