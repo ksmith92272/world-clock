@@ -41,11 +41,12 @@
 			<h1>World Clock</h1>
 			<div class="select-container">
 				<select
-					name=""
-					id=""
+					name="cities"
+					id="cities"
 				>
 					<option value="">Choose a city</option>
-					<option value="guess">Your Current Location</option>
+					<option value="">Your Current Location</option>
+					<option value="Asia/Dubai">Dubai 🇦🇪</option>
 					<option value="Europe/London">London 🇬🇧</option>
 					<option value="America/New_York">New York 🇺🇸</option>
 					<option value="Europe/Paris">Paris 🇫🇷</option>
@@ -53,7 +54,7 @@
 					<option value="Asia/Tokyo">Tokyo 🇯🇵</option>
 				</select>
 			</div>
-			<div>
+			<div id="cities-container">
 				<div
 					class="city"
 					id="America/New_York"
@@ -78,13 +79,12 @@
 						<div class="time"></div>
 					</div>
 				</div>
-
 				<div
 					class="city"
-					id="Asia/Tokyo"
+					id="Asia/Dubai"
 				>
 					<div>
-						<h2>Tokyo 🇯🇵</h2>
+						<h2>Dubai 🇦🇪</h2>
 						<div class="date"></div>
 					</div>
 					<div>
