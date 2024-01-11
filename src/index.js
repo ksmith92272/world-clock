@@ -38,8 +38,17 @@ function showTime(event) {
 	}
 }
 
+//On page load
+updateTime();
+
+//Event listener for drop down menu
 let citySelected = document.getElementById("cities");
 citySelected.addEventListener("change", showTime);
 
-updateTime();
-setInterval(updateTime, 1000);
+//Set interval to update time
+let cities = document.querySelectorAll(".city");
+if (cities.length < 1) {
+	setInterval(showTime, 1000);
+} else {
+	setInterval(updateTime, 1000);
+}
