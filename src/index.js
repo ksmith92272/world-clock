@@ -16,8 +16,8 @@ function showTime(event) {
 	if (event.target.value.length > 0) {
 		let cityElement = document.getElementById("cities-container");
 		let citySelected = document.getElementById("cities");
-		let city = citySelected.options[citySelected.selectedIndex].text;
 
+		let city = citySelected.options[citySelected.selectedIndex].text;
 		let timezone = event.target.value;
 		let current = moment().tz(timezone);
 		let formattedDate = current.format("MMMM Do, YYYY");
